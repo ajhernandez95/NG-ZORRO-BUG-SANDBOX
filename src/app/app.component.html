@@ -1,1 +1,13 @@
-<nz-time-picker [(ngModel)]="time" (ngModelChange)='timeChanged()' (keyup.enter)='timeChanged()'></nz-time-picker>
+<div>
+  <h1>Issue One</h1>
+  <p>Attempting to hit enter key once I have typed in the time does nothing but gives the apperance that the time is now set since it let me type into the box and I hit enter.</p>
+  <p>Also when typing in an option the options get highlighted and when you try and select the highlighted time the times are unselectable so typing in the time actually breaks this component.</p>
+  <nz-time-picker [(ngModel)]="timeOne" (ngModelChange)='timeChangedOne()' (keyup.enter)='timeChangedOne()'></nz-time-picker>
+</div>
+
+
+<div>
+  <h1>Issue Two</h1>
+  <p>Had an issue where if the time was pre-selected from a DB value and the minute was not divisble by 15 then it would not show that time correctly but it seems that the issue is actually that users were selecting the time by typing it in and hitting enter expecting the time to stick but enter does nothing.</p>
+  <nz-time-picker [(ngModel)]="timeTwo" (ngModelChange)='timeChangedTwo()' (keyup.enter)='timeChangedTwo()' [nzMinuteStep]='15'></nz-time-picker>
+</div>
