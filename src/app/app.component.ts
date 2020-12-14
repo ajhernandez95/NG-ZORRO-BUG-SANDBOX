@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngzorro-bug-sandbox';
+  time: any;
+
+  timeChanged() {
+    console.log(this.time);
+  }
 }
